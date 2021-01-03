@@ -2,17 +2,35 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Big from 'big.js';
 
-export default function Form({ onSubmit, currentUser }) {
+export default function Form2({ onSubmit2, currentUser }) {
   return (
-    <form onSubmit={onSubmit}>
+    <form onSubmit={onSubmit2}>
       <fieldset id="fieldset">
-        <p>Sign the guest book, { currentUser.accountId }!</p>
+        <p>Record the tuna book, { currentUser.accountId }!</p>
         <p className="highlight">
-          <label htmlFor="message">Message:</label>
+          <label htmlFor="vessel">Vessel:</label>
           <input
             autoComplete="off"
             autoFocus
-            id="message"
+            id="vessel"
+            required
+          />
+        </p>
+        <p className="highlight">
+          <label htmlFor="location">Location:</label>
+          <input
+            autoComplete="off"
+            autoFocus
+            id="location"
+            required
+          />
+        </p>
+        <p className="highlight">
+          <label htmlFor="holder">Holder:</label>
+          <input
+            autoComplete="off"
+            autoFocus
+            id="holder"
             required
           />
         </p>
@@ -30,15 +48,15 @@ export default function Form({ onSubmit, currentUser }) {
           <span title="NEAR Tokens">Ⓝ</span>
         </p>
         <button type="submit">
-          Sign
+          Record
         </button>
       </fieldset>
     </form>
   );
 }
 
-Form.propTypes = {
-  onSubmit: PropTypes.func.isRequired,
+Form2.propTypes = {
+  onSubmit2: PropTypes.func.isRequired,
   currentUser: PropTypes.shape({
     accountId: PropTypes.string.isRequired,
     balance: PropTypes.string.isRequired

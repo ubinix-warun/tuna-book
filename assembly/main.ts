@@ -1,32 +1,21 @@
-import { PostedMessage, messages } from './model';
+import { PostedMessage, TunaRecord, messages, ledger } from './model';
 
 // --- contract code goes below
 
 // The maximum number of latest messages the contract returns.
 const MESSAGE_LIMIT = 10;
-
-/**
- * Adds a new message under the name of the sender's account id.\
- * NOTE: This is a change method. Which means it will modify the state.\
- * But right now we don't distinguish them with annotations yet.
- */
-export function addMessage(text: string): void {
-  // Creating a new message and populating fields with our data
-  const message = new PostedMessage(text);
-  // Adding the message to end of the the persistent collection
-  messages.push(message);
+  
+export function addTuna(vessel: string, location: string, holder: string): void {
+  const record = new TunaRecord(vessel, location, holder);
+  ledger.push(record);
 }
 
-/**
- * Returns an array of last N messages.\
- * NOTE: This is a view method. Which means it should NOT modify the state.
- */
-export function getMessages(): PostedMessage[] {
-  const numMessages = min(MESSAGE_LIMIT, messages.length);
-  const startIndex = messages.length - numMessages;
-  const result = new Array<PostedMessage>(numMessages);
-  for(let i = 0; i < numMessages; i++) {
-    result[i] = messages[i + startIndex];
+export function getTunas(): TunaRecord[] {
+  const numTunas = min(MESSAGE_LIMIT, ledger.length);
+  const startIndex = ledger.length - numTunas;
+  const result = new Array<TunaRecord>(numTunas);
+  for(let i = 0; i < numTunas; i++) {
+    result[i] = ledger[i + startIndex];
   }
   return result;
 }

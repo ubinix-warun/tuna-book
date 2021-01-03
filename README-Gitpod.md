@@ -1,7 +1,7 @@
-Guest Book - Gitpod version
+Tuna Book - Gitpod version
 ===========================
 
-Sign in with [NEAR] and add a message to the guest book! A starter app built with an [AssemblyScript] backend and a [React] frontend.
+Sign in with [NEAR] and record a tuna to the tuna book! A starter app built with an [AssemblyScript] backend and a [React] frontend.
 
 This README is specific to Gitpod and this example. For local development, please see [README.md](README.md).
 
@@ -41,9 +41,9 @@ The "Open Preview" option will open the site in a tab within the IDE. Note that 
 
 The "Open Browser" option will open a new tab in your browser. Either option will work and is up to your preference.
 
-Once you've opened the web app in your browser, log in and experiment with the simple "guest book" smart contract.
+Once you've opened the web app in your browser, log in and experiment with the simple "tuna book" smart contract.
 
-The "Save" button sends the text input to the blockchain, storing it as a string. The web app will reload with the new guest book messages automatically.
+The "Save" button sends the text input to the blockchain, storing it as a string. The web app will reload with the new tuna book messages automatically.
 
 The "Save & Donate" button demonstrates attaching NEAR and a gas price when calling the smart contract's method `addMessage`. When the web app refreshes with "paid" messages, the user interface highlights them.
 
