@@ -1,4 +1,4 @@
-import { PostedMessage, TunaRecord, messages, ledger } from './model';
+import { TunaRecord, ledger } from './model';
 
 // --- contract code goes below
 

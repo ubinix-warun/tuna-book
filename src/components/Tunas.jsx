@@ -8,8 +8,7 @@ export default function Tunas({ ledger }) {
       {ledger.map((tunarecord, i) =>
         // TODO: format as cards, add timestamp
         <p key={i} >
-          <strong>{tunarecord.holder}</strong>:<br/>
-          {tunarecord.vessel}
+          <strong>#{tunarecord.vessel}</strong> {tunarecord.holder} [{tunarecord.location}] 
         </p>
       )}
     </>
