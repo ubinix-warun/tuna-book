@@ -28,6 +28,7 @@ export default function Tunas({ ledger }) {
           )}
         </tbody>
       </Table>
+      <p>PS: last 7 records</p>
     </>
   );
 }
