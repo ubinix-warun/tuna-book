@@ -2,56 +2,53 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Big from 'big.js';
 
+import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
+
 export default function Form2({ onSubmit2, currentUser }) {
   return (
-    <form onSubmit={onSubmit2}>
+    <Form onSubmit={onSubmit2}>
       <fieldset id="fieldset">
         <p>Record the tuna book, { currentUser.accountId }!</p>
-        <p className="highlight">
-          <label htmlFor="vessel">Vessel:</label>
-          <input
-            autoComplete="off"
-            autoFocus
+
+        <Form.Group >
+          {/* <Form.Label>Vessel:</Form.Label> */}
+          <Form.Control type="text" placeholder="Vessel" 
             id="vessel"
-            required
-          />
-        </p>
-        <p className="highlight">
-          <label htmlFor="location">Location:</label>
-          <input
-            autoComplete="off"
-            autoFocus
+            required  />
+        </Form.Group>
+  
+        <Form.Group >
+          {/* <Form.Label>Location:</Form.Label> */}
+          <Form.Control type="text" placeholder="Location" 
             id="location"
-            required
-          />
-        </p>
-        <p className="highlight">
-          <label htmlFor="holder">Holder:</label>
-          <input
-            autoComplete="off"
-            autoFocus
+            required  />
+        </Form.Group>
+
+        <Form.Group >
+          {/* <Form.Label>Holder:</Form.Label> */}
+          <Form.Control type="text" placeholder="Holder" 
             id="holder"
-            required
-          />
-        </p>
-        <p>
-          <label htmlFor="donation">Donation (optional):</label>
-          <input
-            autoComplete="off"
+            required  />
+        </Form.Group>
+
+        <Form.Group >
+          <Form.Label>Donation (optional):</Form.Label>
+          <Form.Control type="text" autoComplete="off"
             defaultValue={'0'}
             id="donation"
             max={Big(currentUser.balance).div(10 ** 24)}
             min="0"
             step="0.01"
-            type="number"
-          />
-          <span title="NEAR Tokens">Ⓝ</span>
-        </p>
-        <button type="submit">
+            type="number"/>
+            {/* <span title="NEAR Tokens">Ⓝ</span> */}
+        </Form.Group>
+
+        <Button type="submit">
           Record
-        </button>
+        </Button>
       </fieldset>
-    </form>
+    </Form>
   );
 }
 

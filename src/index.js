@@ -4,6 +4,8 @@ import App from './App';
 import getConfig from './config.js';
 import * as nearAPI from 'near-api-js';
 
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 // Initializing contract
 async function initContract() {
   const nearConfig = getConfig(process.env.NODE_ENV || 'testnet');

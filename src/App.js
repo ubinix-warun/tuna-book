@@ -8,6 +8,13 @@ import SignIn from './components/SignIn';
 // import Messages from './components/Messages';
 import Tunas from './components/Tunas';
 
+import Jumbotron from 'react-bootstrap/Jumbotron';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+// import Toast from 'react-bootstrap/Toast';
+import Container from 'react-bootstrap/Container';
+import Button from 'react-bootstrap/Button';
+
 const SUGGESTED_DONATION = '0';
 const BOATLOAD_OF_GAS = Big(3).times(10 ** 13).toFixed();
 
@@ -87,32 +94,37 @@ const App = ({ contract, currentUser, nearConfig, wallet }) => {
   };
 
   return (
-    <main>
-      <header>
+    <Container>
+      <Jumbotron>
+        {/* <Row>
+          <header>
+            <h1>NEAR Tuna Book</h1>
+            { currentUser
+              ? <Button onClick={signOut}>Log out</Button>
+              : <Button onClick={signIn}>Log in</Button>
+            }
+          </header>
+        </Row><br/> */}
+        <Row>
+      { currentUser
+        ? <Col><header>
         <h1>NEAR Tuna Book</h1>
         { currentUser
-          ? <button onClick={signOut}>Log out</button>
-          : <button onClick={signIn}>Log in</button>
+          ? <Button onClick={signOut}>Log out</Button>
+          : <Button onClick={signIn}>Log in</Button>
         }
-      </header>
-      {/* { currentUser
-        ? <Form onSubmit={onSubmit} currentUser={currentUser} />
-        : <SignIn/>
-      } */}
-      { currentUser
-        ? <Form2 onSubmit2={onSubmit2} currentUser={currentUser} />
+      </header><Form2 onSubmit2={onSubmit2} currentUser={currentUser} /></Col>
         : <SignIn/>
       }
-      {/* { !!currentUser && !!messages.length && <Messages messages={messages}/> } */}
-      { !!currentUser && !!ledger.length && <Tunas ledger={ledger}/> }
-    </main>
+      { !!currentUser && !!ledger.length && <Col><Tunas ledger={ledger}/></Col> }
+        </Row>
+      </Jumbotron>
+    </Container>
   );
 };
 
 App.propTypes = {
   contract: PropTypes.shape({
-    // addMessage: PropTypes.func.isRequired,
-    // getMessages: PropTypes.func.isRequired,
     addTuna: PropTypes.func.isRequired,
     getTunas: PropTypes.func.isRequired
   }).isRequired,

@@ -3,7 +3,7 @@ import { TunaRecord, ledger } from './model';
 // --- contract code goes below
 
 // The maximum number of latest messages the contract returns.
-const MESSAGE_LIMIT = 10;
+const MESSAGE_LIMIT = 7;
   
 export function addTuna(vessel: string, location: string, holder: string): void {
   const record = new TunaRecord(vessel, location, holder);
