@@ -34212,7 +34212,7 @@ function Tunas({
   }, /*#__PURE__*/_react.default.createElement("thead", null, /*#__PURE__*/_react.default.createElement("tr", null, /*#__PURE__*/_react.default.createElement("th", null, "#"), /*#__PURE__*/_react.default.createElement("th", null, "Vessel"), /*#__PURE__*/_react.default.createElement("th", null, "Location"), /*#__PURE__*/_react.default.createElement("th", null, "Holder"))), /*#__PURE__*/_react.default.createElement("tbody", null, ledger.map((tunarecord, i) =>
   /*#__PURE__*/
   // TODO: format as cards, add timestamp
-  _react.default.createElement("tr", null, /*#__PURE__*/_react.default.createElement("td", null, i + 1), /*#__PURE__*/_react.default.createElement("td", null, tunarecord.vessel), /*#__PURE__*/_react.default.createElement("td", null, tunarecord.location), /*#__PURE__*/_react.default.createElement("td", null, tunarecord.holder))))));
+  _react.default.createElement("tr", null, /*#__PURE__*/_react.default.createElement("td", null, i + 1), /*#__PURE__*/_react.default.createElement("td", null, tunarecord.vessel), /*#__PURE__*/_react.default.createElement("td", null, tunarecord.location), /*#__PURE__*/_react.default.createElement("td", null, tunarecord.holder))))), /*#__PURE__*/_react.default.createElement("p", null, "PS: last 7 records"));
 }
 
 Tunas.propTypes = {
@@ -61165,7 +61165,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "37507" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "40735" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
