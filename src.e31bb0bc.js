@@ -34481,14 +34481,14 @@ const App = ({
     window.location.replace(window.location.origin + window.location.pathname);
   };
 
-  return /*#__PURE__*/_react.default.createElement(_Container.default, null, /*#__PURE__*/_react.default.createElement(_Jumbotron.default, null, /*#__PURE__*/_react.default.createElement(_Row.default, null, currentUser ? /*#__PURE__*/_react.default.createElement(_Col.default, null, /*#__PURE__*/_react.default.createElement("header", null, /*#__PURE__*/_react.default.createElement("h1", null, "NEAR Tuna Book"), currentUser ? /*#__PURE__*/_react.default.createElement(_Button.default, {
+  return /*#__PURE__*/_react.default.createElement(_Container.default, null, /*#__PURE__*/_react.default.createElement(_Jumbotron.default, null, /*#__PURE__*/_react.default.createElement(_Row.default, null, currentUser ? /*#__PURE__*/_react.default.createElement(_Col.default, null, /*#__PURE__*/_react.default.createElement("header", null, /*#__PURE__*/_react.default.createElement("h1", null, "NEAR Tuna Book"), /*#__PURE__*/_react.default.createElement(_Button.default, {
     onClick: signOut
-  }, "Log out") : /*#__PURE__*/_react.default.createElement(_Button.default, {
-    onClick: signIn
-  }, "Log in")), /*#__PURE__*/_react.default.createElement(_Form.default, {
+  }, "Log out")), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement(_Form.default, {
     onSubmit2: onSubmit2,
     currentUser: currentUser
-  })) : /*#__PURE__*/_react.default.createElement(_SignIn.default, null), !!currentUser && !!ledger.length && /*#__PURE__*/_react.default.createElement(_Col.default, null, /*#__PURE__*/_react.default.createElement(_Tunas.default, {
+  })) : /*#__PURE__*/_react.default.createElement(_Col.default, null, /*#__PURE__*/_react.default.createElement("header", null, /*#__PURE__*/_react.default.createElement("h1", null, "NEAR Tuna Book"), /*#__PURE__*/_react.default.createElement(_Button.default, {
+    onClick: signIn
+  }, "Log in")), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement(_SignIn.default, null)), !!currentUser && !!ledger.length && /*#__PURE__*/_react.default.createElement(_Col.default, null, /*#__PURE__*/_react.default.createElement(_Tunas.default, {
     ledger: ledger
   })))));
 };
@@ -61165,7 +61165,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "40735" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "40829" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
