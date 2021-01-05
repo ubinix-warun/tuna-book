@@ -109,12 +109,11 @@ const App = ({ contract, currentUser, nearConfig, wallet }) => {
       { currentUser
         ? <Col><header>
         <h1>NEAR Tuna Book</h1>
-        { currentUser
-          ? <Button onClick={signOut}>Log out</Button>
-          : <Button onClick={signIn}>Log in</Button>
-        }
-      </header><Form2 onSubmit2={onSubmit2} currentUser={currentUser} /></Col>
-        : <SignIn/>
+        <Button onClick={signOut}>Log out</Button>
+      </header><br/><Form2 onSubmit2={onSubmit2} currentUser={currentUser} /></Col>
+        : <Col><header>
+        <h1>NEAR Tuna Book</h1><Button onClick={signIn}>Log in</Button>
+        </header><br/><SignIn/></Col>
       }
       { !!currentUser && !!ledger.length && <Col><Tunas ledger={ledger}/></Col> }
         </Row>
