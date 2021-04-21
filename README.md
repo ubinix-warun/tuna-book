@@ -1,11 +1,12 @@
 Tuna Book
 ==========
 
-[![Build Status](https://travis-ci.com/ubinix-warun/tuna-book.svg?branch=master)](https://travis-ci.com/ubinix-warun/tuna-book)
 
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/ubinix-warun/tuna-book)
 
 <!-- MAGIC COMMENT: DO NOT DELETE! Everything above this line is hidden on NEAR Examples page -->
+
+![Image of TUNA BOOK](https://pbs.twimg.com/media/Eq_E-oxUYAEW351?format=jpg)
 
 Sign in with [NEAR] and record a tuna to the tuna book! A starter app built with an [AssemblyScript] backend and a [React] frontend.
 
