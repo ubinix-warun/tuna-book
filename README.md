@@ -6,7 +6,7 @@ Tuna Book
 
 <!-- MAGIC COMMENT: DO NOT DELETE! Everything above this line is hidden on NEAR Examples page -->
 
-![Image of TUNA BOOK](https://pbs.twimg.com/media/Eq_E-oxUYAEW351?format=jpg)
+![Image of TUNA BOOK](https://pbs.twimg.com/media/EzemppDVgAMxByw?format=jpg)
 
 Sign in with [NEAR] and record a tuna to the tuna book! A starter app built with an [AssemblyScript] backend and a [React] frontend.
 
