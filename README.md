@@ -42,10 +42,32 @@ Exploring The Code
 Both contract and client-side code will auto-reload as you change source files.
 
 
-Deploy
+Deploy (Skynet Skapp)
 ======
 
 Every smart contract in NEAR has its [own associated account][NEAR accounts]. When you run `yarn dev`, your smart contracts get deployed to the live NEAR TestNet with a throwaway account. When you're ready to make it permanent, here's how.
+
+
+Step 0: Install skynet command
+--------------------------
+
+You need golang installed globally. Here's how:
+
+    gvm use go1.13.8
+    go get -u github.com/NebulousLabs/skynet-cli/...
+
+Step 1: deploy!
+---------------
+
+One command:
+
+    skynet upload dist/
+    
+Use Skylink ID => https://siasky.net/SkylinkID
+
+
+Deploy (Github Page)
+======
 
 
 Step 0: Install near-cli
@@ -100,7 +122,6 @@ As you can see in `package.json`, this does two things:
 
 1. builds & deploys smart contracts to NEAR TestNet
 2. builds & deploys frontend code to GitHub using [gh-pages]. This will only work if the project already has a repository set up on GitHub. Feel free to modify the `deploy` script in `package.json` to deploy elsewhere.
-
 
 
   [NEAR]: https://nearprotocol.com/
