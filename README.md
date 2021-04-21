@@ -63,7 +63,7 @@ One command:
 
     skynet upload dist/
     
-Use Skylink ID => https://siasky.net/SkylinkID
+Use Skylink ID => https://siasky.net/_SkylinkID_
 
 
 Deploy (Github Page)
