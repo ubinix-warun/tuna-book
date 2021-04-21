@@ -61,6 +61,7 @@ Step 1: deploy!
 
 One command:
 
+    yarn deploy
     skynet upload dist/
     
 Use Skylink ID => https://siasky.net/_SkylinkID_
